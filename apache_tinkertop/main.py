@@ -1,6 +1,3 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
-# taken from: https://github.com/bricaud/gremlin-server
 from pprint import pprint
 from gremlin_python import statics
 from gremlin_python.structure.graph import Graph
