@@ -60,12 +60,8 @@ func main() {
 	call_query_string(client,logger,"g.V()")
 
 	//create edges between vertices with same property file_type
-	// FIXME: Trying to call the same call as in python implementation, but somehow cannot save string :D in golang
-	var query_string := 'g.V().has("file_type","zip").as("a").V().has("file_type","zip").as("b").where("a", eq("b")).by("file_type").addE("link").from("a").to("b")'
-	call_query_string(client,logger,"a")
-
-	//responses, err := client.ExecuteStringQuery("g.V().has(\"file_type\",\"zip\").as(\"a\").V().has(\"file_type\",\"zip\").as(\"b\").where(\"a\", eq(\"b\")).by(\"file_type\").addE(\"link\").from(\"a\").to(\"b\").next()")
-	//responses, err := client.ExecuteStringQuery('g.V().has("file_type","zip").as("a").V().has("file_type","zip").as("b").where("a", eq("b")).by("file_type").addE("link").from("a").to("b").next()')
+	query_string := "g.V().has('file_type','zip').as('a').V().has('file_type','zip').as('b').where('a', eq('b')).by('file_type').addE('link').from('a').to('b')"
+	call_query_string(client,logger,query_string)
 
 	// print edges
 	call_query_string(client,logger,"g.E()")
@@ -73,4 +69,5 @@ func main() {
 	print_vertices_count(client, logger)
 
 }
+
 
