@@ -14,7 +14,7 @@ Databases of our interest:
 * [] [dgraph](dgraph)
 * [] [arangodb](arangodb)
 * [] [orientdb](orientdb)
-* [] Amazon Neptune
+* [] [Amazon Neptune](amazon_neptune)
 * [] Azure CosmosDB
 * [] ~flockDB~ (unmaintained now)
 * [] cayley
@@ -22,3 +22,4 @@ Databases of our interest:
 * [] neo4j
 
 
+## what is tincker-pop stack (gremlin)
